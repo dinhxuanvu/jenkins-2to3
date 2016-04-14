@@ -1,0 +1,82 @@
+Started by user [8mha:AAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyxEgYR/dLi1CL94sriktTc+KTSzJyU1CIAR/jh7MkAAAA=[0mJenkins System Builder
+Building remotely on [8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgZh/eT83ILSktQi/ZLU4hKTpJyUIgAnTP/nyAAAAA==[0mtest4bldr (test4-build) in workspace /var/lib/openshift/570fd38f14eb843250000086/app-root/runtime/repo
+Checkout:repo / /var/lib/openshift/570fd38f14eb843250000086/app-root/runtime/repo - hudson.remoting.Channel@193ce8b:test4bldr
+Using strategy: Default
+Checkout:repo / /var/lib/openshift/570fd38f14eb843250000086/app-root/runtime/repo - hudson.remoting.LocalChannel@1dc0b99
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository origin
+Fetching upstream changes from ssh://570fca3014eb84325000002e@test4-vdinh.dev.rhcloud.com/~/git/test4.git
+Seen branch in repository origin/HEAD
+Seen branch in repository origin/master
+Commencing build of Revision bc1ce12326433de56301d1964ba256dc4c09462c (origin/HEAD, origin/master)
+Checking out Revision bc1ce12326433de56301d1964ba256dc4c09462c (origin/HEAD, origin/master)
+No change to record in branch origin/HEAD
+No change to record in branch origin/master
+[repo] $ /bin/sh -xe /tmp/hudson399453168379389327.sh
++ source /usr/lib/openshift/cartridge_sdk/bash/sdk
+++ '[' false == true ']'
+++ OO_BASH_SDK=true
++ alias 'rsync=rsync --exclude-from='\''/var/lib/openshift/570fd38f14eb843250000086/python//metadata/rsync.excludes'\'' --delete-after -azS -e '\''/usr/libexec/openshift/cartridges/jenkins/bin/git_ssh_wrapper.sh'\'''
++ upstream_ssh=570fca3014eb84325000002e@test4-vdinh.dev.rhcloud.com
++ rm -f /var/lib/openshift/570fd38f14eb843250000086//app-deployments/current/metadata.json
++ marker_present force_clean_build
++ '[' -f /var/lib/openshift/570fd38f14eb843250000086/app-root/runtime/repo//.openshift/markers/force_clean_build ']'
++ set +e
++ rsync --exclude-from=/var/lib/openshift/570fd38f14eb843250000086/python//metadata/rsync.excludes --delete-after -azS -e /usr/libexec/openshift/cartridges/jenkins/bin/git_ssh_wrapper.sh '570fca3014eb84325000002e@test4-vdinh.dev.rhcloud.com:$OPENSHIFT_BUILD_DEPENDENCIES_DIR' /var/lib/openshift/570fd38f14eb843250000086/app-root/runtime/build-dependencies/
+Warning: Permanently added 'test4-vdinh.dev.rhcloud.com,172.18.5.156' (RSA) to the list of known hosts.
++ rsync --exclude-from=/var/lib/openshift/570fd38f14eb843250000086/python//metadata/rsync.excludes --delete-after -azS -e /usr/libexec/openshift/cartridges/jenkins/bin/git_ssh_wrapper.sh '570fca3014eb84325000002e@test4-vdinh.dev.rhcloud.com:$OPENSHIFT_DEPENDENCIES_DIR' /var/lib/openshift/570fd38f14eb843250000086/app-root/runtime/dependencies/
+Warning: Permanently added 'test4-vdinh.dev.rhcloud.com,172.18.5.156' (RSA) to the list of known hosts.
++ set -e
++ gear build
+Building git ref 'origin/HEAD', commit bc1ce12
+Activating virtenv
+Checking for pip dependency listed in requirements.txt file..
+The directory '/var/lib/openshift/570fd38f14eb843250000086/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/var/lib/openshift/570fd38f14eb843250000086/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+You must give at least one requirement to install (see "pip help install")
+Checking pip install marker..
+Running setup.py script..
+running develop
+running egg_info
+creating YourAppName.egg-info
+writing YourAppName.egg-info/PKG-INFO
+writing dependency_links to YourAppName.egg-info/dependency_links.txt
+writing top-level names to YourAppName.egg-info/top_level.txt
+writing manifest file 'YourAppName.egg-info/SOURCES.txt'
+reading manifest file 'YourAppName.egg-info/SOURCES.txt'
+writing manifest file 'YourAppName.egg-info/SOURCES.txt'
+running build_ext
+Creating /var/lib/openshift/570fd38f14eb843250000086/app-root/runtime/dependencies/python/virtenv/venv/lib/python3.3/site-packages/YourAppName.egg-link (link to .)
+Adding YourAppName 1.0 to easy-install.pth file
+
+Installed /var/lib/openshift/570fd38f14eb843250000086/app-root/runtime/repo
+Processing dependencies for YourAppName==1.0
+Finished processing dependencies for YourAppName==1.0
++ /usr/libexec/openshift/cartridges/jenkins/bin/git_ssh_wrapper.sh 570fca3014eb84325000002e@test4-vdinh.dev.rhcloud.com 'gear stop --conditional --exclude-web-proxy --git-ref bc1ce12326433de56301d1964ba256dc4c09462c'
+Warning: Permanently added 'test4-vdinh.dev.rhcloud.com,172.18.5.156' (RSA) to the list of known hosts.
+Stopping gear...
+Stopping Python 3.3 cartridge
+Waiting for stop to finish
+Waiting for stop to finish
+++ /usr/libexec/openshift/cartridges/jenkins/bin/git_ssh_wrapper.sh 570fca3014eb84325000002e@test4-vdinh.dev.rhcloud.com 'gear create-deployment-dir'
+Warning: Permanently added 'test4-vdinh.dev.rhcloud.com,172.18.5.156' (RSA) to the list of known hosts.
++ deployment_dir=2016-04-14_13-30-34.734
++ rsync --exclude-from=/var/lib/openshift/570fd38f14eb843250000086/python//metadata/rsync.excludes --delete-after -azS -e /usr/libexec/openshift/cartridges/jenkins/bin/git_ssh_wrapper.sh /var/lib/openshift/570fd38f14eb843250000086//app-deployments/current/metadata.json 570fca3014eb84325000002e@test4-vdinh.dev.rhcloud.com:app-deployments/2016-04-14_13-30-34.734/metadata.json
+Warning: Permanently added 'test4-vdinh.dev.rhcloud.com,172.18.5.156' (RSA) to the list of known hosts.
++ rsync --exclude-from=/var/lib/openshift/570fd38f14eb843250000086/python//metadata/rsync.excludes --delete-after -azS -e /usr/libexec/openshift/cartridges/jenkins/bin/git_ssh_wrapper.sh --exclude .git /var/lib/openshift/570fd38f14eb843250000086/app-root/runtime/repo/ 570fca3014eb84325000002e@test4-vdinh.dev.rhcloud.com:app-root/runtime/repo/
+Warning: Permanently added 'test4-vdinh.dev.rhcloud.com,172.18.5.156' (RSA) to the list of known hosts.
++ rsync --exclude-from=/var/lib/openshift/570fd38f14eb843250000086/python//metadata/rsync.excludes --delete-after -azS -e /usr/libexec/openshift/cartridges/jenkins/bin/git_ssh_wrapper.sh /var/lib/openshift/570fd38f14eb843250000086/app-root/runtime/build-dependencies/ 570fca3014eb84325000002e@test4-vdinh.dev.rhcloud.com:app-root/runtime/build-dependencies/
+Warning: Permanently added 'test4-vdinh.dev.rhcloud.com,172.18.5.156' (RSA) to the list of known hosts.
++ rsync --exclude-from=/var/lib/openshift/570fd38f14eb843250000086/python//metadata/rsync.excludes --delete-after -azS -e /usr/libexec/openshift/cartridges/jenkins/bin/git_ssh_wrapper.sh /var/lib/openshift/570fd38f14eb843250000086/app-root/runtime/dependencies/ 570fca3014eb84325000002e@test4-vdinh.dev.rhcloud.com:app-root/runtime/dependencies/
+Warning: Permanently added 'test4-vdinh.dev.rhcloud.com,172.18.5.156' (RSA) to the list of known hosts.
++ /usr/libexec/openshift/cartridges/jenkins/bin/git_ssh_wrapper.sh 570fca3014eb84325000002e@test4-vdinh.dev.rhcloud.com 'gear remotedeploy --deployment-datetime 2016-04-14_13-30-34.734'
+Warning: Permanently added 'test4-vdinh.dev.rhcloud.com,172.18.5.156' (RSA) to the list of known hosts.
+Preparing build for deployment
+Deployment id is 6dd3ecef
+Activating deployment
+Starting Python 3.3 cartridge (Apache+mod_wsgi)
+Application directory "/" selected as DocumentRoot
+Application "wsgi.py" selected as default WSGI entry point
+Archiving artifacts
+Finished: SUCCESS

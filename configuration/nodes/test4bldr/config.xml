@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.openshift.OpenShiftSlave plugin="openshift@1.4">
+  <name>test4bldr</name>
+  <description>Builder for test4-build</description>
+  <remoteFS></remoteFS>
+  <numExecutors>2</numExecutors>
+  <mode>NORMAL</mode>
+  <retentionStrategy class="hudson.slaves.CloudRetentionStrategy">
+    <idleMinutes>15</idleMinutes>
+  </retentionStrategy>
+  <launcher class="hudson.plugins.openshift.OpenShiftComputerLauncher"/>
+  <label>test4-build</label>
+  <nodeProperties/>
+  <userId>SYSTEM</userId>
+  <applicationUUID>570fca3014eb84325000002e</applicationUUID>
+  <builderType>redhat-python-3.3</builderType>
+  <builderSize>small</builderSize>
+  <builderPlatform>linux</builderPlatform>
+  <builderTimeout>300000</builderTimeout>
+  <uuid>570fd38f14eb843250000086</uuid>
+</hudson.plugins.openshift.OpenShiftSlave>
